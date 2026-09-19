@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameMonitor Bot</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <div>
+            <h1> GameMonitor</h1>
+            <p>Bot de monitoreo de videojuegos en línea</p>
+        </div>
+        <button id="themeButton">
+            🌙 Modo oscuro
+        </button>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container">
+        <!-- ESTADÍSTICAS -->
+        <section class="statistics">
+            <div class="stat-card">
+                <h3>Videojuegos</h3>
+                <span id="totalGames">0</span>
+            </div>
+            <div class="stat-card">
+                <h3>Online</h3>
+                <span id="onlineGames">0</span>
+            </div>
+            <div class="stat-card">
+                <h3>Jugadores</h3>
+                <span id="totalPlayers">0</span>
+            </div>
+            <div class="stat-card">
+                <h3>Alertas</h3>
+                <span id="totalAlerts">0</span>
+            </div>
+        </section>
+
+        <!-- BOT -->
+        <section class="bot-panel">
+            <div>
+                <h2>Bot de monitoreo</h2>
+                <p id="botStatus">Bot detenido</p>
+                <p>
+                    Última actualización:
+                    <strong id="lastUpdate">--</strong>
+                </p>
+            </div>
+            <div>
+                <button id="startBot" class="btn btn-success">
+                    Iniciar Bot
+                </button>
+                <button id="stopBot" class="btn btn-danger">
+                    Detener Bot
+                </button>
+            </div>
+        </section>
+
+        <!-- BUSCADOR -->
+        <section class="search">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder=" Buscar videojuego..."
+            >
+        </section>
+
+        <!-- VIDEOJUEGOS -->
+        <section>
+            <h2>Videojuegos monitoreados</h2>
+            <div id="gamesContainer" class="games-grid">
+                <!-- JavaScript insertará las tarjetas -->
+            </div>
+        </section>
+
+        <!-- ALERTAS -->
+        <section class="alerts">
+            <h2>Alertas del bot</h2>
+            <div id="alertsContainer">
+                <p class="empty">No hay alertas.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            GameMonitor Bot |
+            Desarrollo de Aplicaciones Web
+        </p>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
